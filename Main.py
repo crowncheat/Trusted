@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 import asyncio
+import os
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 GUILD_ID = "123456789012345678"
@@ -40,4 +41,4 @@ async def check_bios():
         except Exception as e:
             print(f"Erreur pour {member.name} : {e}")
 
-bot.run(DISCORD_TOKEN)
+bot.run(TOKEN)
